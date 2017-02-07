@@ -1,0 +1,47 @@
+<h1>List of Movies</h1>
+<table>
+  <tr>
+    <th>
+      CRUD
+    </th>
+    <th>
+      Image
+    </th>
+    <th>
+      Title
+    </th>
+    <th>
+      Year
+    </th>
+    <th>
+      Duration
+    </th>
+    <th>
+      Description
+    </th>
+  </tr>
+<% @list_of_movies.each do |movie| %>
+  <tr>
+    <td>
+      <a href="/movies/<%= movie.id %>">Show</a>
+      <a href="/<%= movie.id %>/edit_form">Edit</a>
+      <a href="/delete_movie/<%= movie.id %>">Delete</a>
+    </td>
+    <td>
+      <a href="/movies/<%= movie.id %>"><img src="<%= movie.image_url %>" alt="Movie Image"></a>
+    </td>
+    <td>
+      <a href="/movies/<%= movie.id %>"><%= movie.title %></a>
+    </td>
+    <td>
+      <%= movie.year %>
+    </td>
+    <td>
+      <%= movie.duration %>
+    </td>
+    <td>
+      <%= movie.description %>
+    </td>
+  </tr>
+<% end %>
+</table>
