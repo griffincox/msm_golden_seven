@@ -1,0 +1,12 @@
+<h2>Add a new director</h2>
+<form action="http://localhost:3000/directors/<%= @new_director.id %>/create_row">
+  <label for="name">Name</label>
+  <input type="text" name="name" value="<%= @new_director.name %>">
+  <label for="image_url">Image URL</label>
+  <input type="text" name="image_url" value="<%= @new_director.image_url %>">
+  <label for="dob">DOB</label>
+  <input type="text" name="dob" value="<%= @new_director.dob %>">
+  <label for="bio">Bio</label>
+  <input type="text" name="bio" value="<%= @new_director.bio %>">
+  <button>Add director</button>
+</form>

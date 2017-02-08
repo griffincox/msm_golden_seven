@@ -1,0 +1,43 @@
+<h2>List of Directors</h2>
+<a href="/directors/new_form">
+  <button class="btn btn-md btn-primary">Add Director</button>
+</a>
+<table>
+  <tr>
+    <th>
+      CRUD
+    </th>
+    <th>
+      Image
+    </th>
+    <th>
+      Name
+    </th>
+    <th>
+      DOB
+    </th>
+    <th>
+      Bio
+    </th>
+  </tr>
+<% @list_of_directors.each do |director| %>
+  <tr>
+    <td>
+      <a href="/directors/<%= director.id %>">Show</a>
+      <a href="/directors/<%= director.id %>/edit_form">Edit</a>
+      <a href="/delete_director/<%= director.id %>">Delete</a>
+    </td>
+    <td>
+      <a href="/directors/<%= director.id %>"><img src="<%= director.image_url %>" alt="Director Image"></a>
+    </td>
+    <td>
+    <a href="/directors/<%= director.id %>"><%= director.name %></a>
+    <td>
+      <%= director.dob %>
+    </td>
+    <td>
+      <%= director.bio %>
+    </td>
+  </tr>
+<% end %>
+</table>

@@ -1,0 +1,12 @@
+<h2>Add a new actor</h2>
+<form action="http://localhost:3000/actors/<%= @new_actor.id %>/create_row">
+  <label for="name">Name</label>
+  <input type="text" name="name" value="<%= @new_actor.name %>">
+  <label for="image_url">Image URL</label>
+  <input type="text" name="image_url" value="<%= @new_actor.image_url %>">
+  <label for="dob">DOB</label>
+  <input type="text" name="dob" value="<%= @new_actor.dob %>">
+  <label for="bio">Bio</label>
+  <input type="text" name="bio" value="<%= @new_actor.bio %>">
+  <button>Add actor</button>
+</form>

@@ -1,0 +1,9 @@
+<h2> <%= @director.name %></h2>
+<img src="<%= @director.image_url %>" alt="<%= @director.name %> Image">
+<p><%= @director.dob %></p>
+<p><%= @director.bio %></p>
+<p>
+  <a href="/directors">Back</a>
+  <a href="/directors/<%= @director.id %>/edit_form">Edit</a>
+  <a href="/delete_director/<%= @director.id %>">Delete</a>
+</p>

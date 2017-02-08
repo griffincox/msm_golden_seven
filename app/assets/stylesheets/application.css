@@ -21,3 +21,15 @@
  td {
    padding: 10px 0;
  }
+ form input {
+   display: block;
+ }
+ button {
+   margin: 20px 20px 20px 20px;
+ }
+ .logo {
+   margin: 30px 30px 30px 30px;
+ }
+ .home-lists {
+   font-size: 36px;
+ }
